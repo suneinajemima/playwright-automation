@@ -10,6 +10,7 @@ test('firsttest' , async({page,context})=>{
     await page.locator('#colors').selectOption(['red','blue']);
     await page.getByLabel('Sorted List:').selectOption(['dog','fox','elephant']);
     await page.pause();
+    console.log("git actions testing");
     await page.locator('#datepicker').click();
 
     const targetMonth = "December";
@@ -20,7 +21,7 @@ test('firsttest' , async({page,context})=>{
       await page.locator('.ui-datepicker-next').click();
       calendarTitle = await page.locator('.ui-datepicker-title').textContent();
   }
-  
+
  await page.locator('.ui-datepicker-calendar a', { hasText: targetDay }).click();
 
 
